@@ -1,0 +1,21 @@
+.studentInfo{
+display:flex;
+border:2px black solid;
+align-items: center;
+justify-content: space-between;
+padding: 5px;
+width: 200px;
+}
+.editBut{
+    height:40px;
+}
+.editItem{
+    transform: scale(2.5);
+    border:2px black solid;
+    transform: translateX(200px);
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}

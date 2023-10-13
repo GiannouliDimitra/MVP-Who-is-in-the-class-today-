@@ -1,0 +1,15 @@
+.listCards{
+    width:100%;
+    display:grid;
+    grid-template-columns: repeat(5,1fr);
+    gap:20px;
+    }
+.Container{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.logo{
+    background-color: rgb(200, 198, 198);
+    width:50px
+}

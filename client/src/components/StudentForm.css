@@ -1,0 +1,24 @@
+*{
+    box-sizing: border-box;
+}
+.studentForm{
+    display:grid;
+    grid-template-columns: 1fr;
+    justify-items: center;
+    width:100%;
+    gap:20px;
+}
+input{
+    width:45%;
+    height: 40px;
+}
+.createBut{
+    width:20%;
+    height:150%;
+}
+
+.mainContainer{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
