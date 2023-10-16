@@ -2,7 +2,7 @@ import { useState } from "react";
 import axios from "axios";
 import ("./StudentInfo.css");
 
-function StudentInfo ( { student, getStudents } ){
+function StudentInfo ( { student, getStudents , countAbsents } ){
 
     //states
     const [isEdit, setIsEdit] = useState(false);
@@ -22,6 +22,7 @@ try {
     })
     .then ((res) => alert(res.data.msg))
     .then(() =>getStudents())
+    .then(() =>countAbsents())
     .then(() =>setIsEdit(false))
     .catch((err) => console.log(err))
     

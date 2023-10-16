@@ -2,7 +2,7 @@ import StudentInfo from "./StudentInfo";
 import Navbar from "./Navbar";
 import ("./EditForm.css")
 
-function EditForm ( { students , getStudents} ) {
+function EditForm ( { students , getStudents, countAbsents} ) {
     
     return (
         <div>
@@ -11,7 +11,7 @@ function EditForm ( { students , getStudents} ) {
             <Navbar/>
             <div className="cards">
                 {students.map((student) => (
-                    <StudentInfo className ="student" key = {student._id} student ={student} getStudents={getStudents}
+                    <StudentInfo className ="student" key = {student._id} student ={student} getStudents={getStudents} countAbsents = {countAbsents}
                     />
                      ))
                  }

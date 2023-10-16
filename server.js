@@ -13,7 +13,7 @@ const studentRoutes = require("./routers/studentRouter");
 
 
 app.use ("/", studentRoutes);
-app.listen (port, () => {
+app.listen (process.env.PORT || port, () => {
     console.log (`The server is working in port ${port}`)
 });
 

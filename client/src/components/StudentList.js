@@ -3,10 +3,7 @@ import Navbar from "./Navbar";
 import { useEffect } from "react";
 import ("./StudentList.css");
 
-function StudentList ( { students,getStudents } ) {
-    useEffect(() => {
-        getStudents();
-      }, []);
+function StudentList ( { students,getStudents, countAbsents, absents } ) {
     return (
         <div>
               <h2>Who is in the class?</h2>
@@ -21,6 +18,7 @@ function StudentList ( { students,getStudents } ) {
                 }
                 </div>
                 </div>
+                <h4>{absents}</h4>
         </div>  
     )
 };
