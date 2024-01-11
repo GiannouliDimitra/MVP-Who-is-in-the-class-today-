@@ -1,0 +1,15 @@
+.homeMainContainer{
+    display: flex;
+    width:100%;
+    height: 100%;
+    border:1px solid black;
+    margin:100px;
+}
+.title{
+    font-family: LuckiestGuy;
+    font-size: 30px;
+}
+.homeImage{
+    width:50%;
+    height:50%;
+}

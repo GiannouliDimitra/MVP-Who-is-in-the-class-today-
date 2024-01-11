@@ -3,7 +3,8 @@ import axios from "axios";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import StudentForm from "./components/StudentForm";
 import EditForm from "./components/EditForm";
-import StudentList from "./components/StudentList"
+import StudentList from "./components/StudentList";
+import Home from "./components/Home";
 import ("./App.css");
 
 function App() {
@@ -53,7 +54,8 @@ async function countAbsents () {
   return (
     <BrowserRouter>
     <Routes>
-      <Route path = "/" element = { <StudentList students = {students} getStudents={getStudents}  countAbsents = {countAbsents} absents ={absents} /> }/>
+      <Route path = "/" element = { <Home /> }/>
+      <Route path = "/students" element = { <StudentList students = {students} getStudents={getStudents}  countAbsents = {countAbsents} absents ={absents} /> }/>
       <Route path = "/form" element = { <StudentForm getStudents={getStudents} student={student} setStudent={setStudent}/> } />
       <Route path = "/edit" element = { <EditForm students={students} getStudents={getStudents} countAbsents ={countAbsents}/> } />
     </Routes>  

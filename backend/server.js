@@ -12,8 +12,8 @@ const studentModel = require ("./models/studentModel");
 const studentRoutes = require("./routers/studentRouter");
 
 
-app.use ("/", studentRoutes);
-app.listen (process.env.PORT || port, () => {
+app.use("/", studentRoutes);
+app.listen (port, () => {
     console.log (`The server is working in port ${port}`)
 });
 

@@ -1,6 +1,5 @@
 import StudentItem from "./StudentItem";
 import Navbar from "./Navbar";
-import { useEffect } from "react";
 import ("./StudentList.css");
 
 function StudentList ( { students,getStudents, countAbsents, absents } ) {
