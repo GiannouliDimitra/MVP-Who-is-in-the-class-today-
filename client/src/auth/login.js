@@ -13,8 +13,9 @@ function Login () {
 //states && variables
 let [email, setEmail] = useState("");
 let [password, setPassword] = useState("");
+const [passwordType,setPasswordType] = useState ("password");
 const [eye,setEye] = useState ("closedEye");
-const[passwordType,setPasswordType] = useState ("password");
+
 let decoded;
 let token;
 const navigate = useNavigate();
@@ -22,7 +23,7 @@ const navigate = useNavigate();
 async function handleLogin(e) {
     try {
       e.preventDefault();
-      let res = await axios.post("https://bookanoffice.onrender.com/login", {
+      let res = await axios.post("http://localhost:8000/login", {
           email,
           password,
       });
@@ -32,7 +33,7 @@ async function handleLogin(e) {
       // Save the token in the browser
       if(res.status === 200) {
         Swal.fire({text: res.data.msg,
-          confirmButtonColor:"#B45931ff"});
+          confirmButtonColor:"#FC6CAC"});
         decoded = jwtDecode(token);
         console.log (decoded, token)
         localStorage.setItem("token", token);
@@ -40,7 +41,7 @@ async function handleLogin(e) {
       }
     } catch (error) {
       Swal.fire( {text: "Can not login, please check your email or password.",
-      confirmButtonColor:"#B45931ff"});
+      confirmButtonColor:"#FC6CAC"});
     }
   }
 
@@ -69,7 +70,7 @@ async function handleLogin(e) {
             onChange = {(e) => setPassword(e.target.value)}
             />   
             <button className='loginBut' type='submit'>Login</button>
-            <h4 className='signUpTextInfo'>To create an account <Link className='signUpLink' to='/signUp'>  Sign UP</Link></h4>
+            <h4 className='signUpTextInfo'>To create an account <Link className='signUpLink' to='/signUp'>  Sign - UP</Link></h4>
         </form>
         <button className={eye} 
             type="text" 
@@ -84,7 +85,7 @@ async function handleLogin(e) {
                 setPasswordType("password")
                 return
               }
-              }}><img className="imgEye"src={require(`./authPhotos/${eye}.png`)} /></button>
+              }}><img className="imgEye" alt="eye" src={require(`./authPhotos/${eye}.png`)} /></button>
     </div>
     </div>
      </div>

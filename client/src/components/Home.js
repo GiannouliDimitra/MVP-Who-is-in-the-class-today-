@@ -13,7 +13,7 @@ function Home () {
                 <h3 className="title">Who is in the class?</h3>
             </div>
             <div>
-            <img className="homeImage" src={image}></img></div>
+            <img className="homeImage" alt ="woman wondering" src={image}></img></div>
         </div>   
             </div>
           

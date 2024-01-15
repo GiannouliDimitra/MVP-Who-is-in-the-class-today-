@@ -5,6 +5,7 @@ import StudentForm from "./components/StudentForm";
 import EditForm from "./components/EditForm";
 import StudentList from "./components/StudentList";
 import Home from "./components/Home";
+import SignUp from "./auth/SignUp.js";
 import ("./App.css");
 
 function App() {
@@ -29,7 +30,7 @@ const getStudents = () => {
   } catch (error) {
     console.log(error)
   }
-  console.log(students)
+  console.log("the students" , students)
 };
 //rendering students without refreshing
 useEffect(() => {
@@ -55,6 +56,7 @@ async function countAbsents () {
     <BrowserRouter>
     <Routes>
       <Route path = "/" element = { <Home /> }/>
+      <Route path = "/signUp" element = { <SignUp /> }/>
       <Route path = "/students" element = { <StudentList students = {students} getStudents={getStudents}  countAbsents = {countAbsents} absents ={absents} /> }/>
       <Route path = "/form" element = { <StudentForm getStudents={getStudents} student={student} setStudent={setStudent}/> } />
       <Route path = "/edit" element = { <EditForm students={students} getStudents={getStudents} countAbsents ={countAbsents}/> } />

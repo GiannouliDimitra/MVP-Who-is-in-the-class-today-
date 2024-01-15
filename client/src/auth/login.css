@@ -3,7 +3,7 @@ font-family: LuckiestGuy;
 box-sizing:border-box;
 }
 .loginMainContainer{
-margin:5%;
+margin:40% 5% 0% 0%;
 padding:2%;
 display: flex;
 flex-direction: column;
@@ -72,7 +72,7 @@ height:30px;
 }
 .closedEye, .openEye{
 position:relative;
-top:-190px;
+top:-200px;
 left:130px;
 background-color: transparent;
 background-size: cover;
@@ -82,12 +82,12 @@ border: none;
 margin:10px 0;
 font-size:25px;
 }
-    .swal2-popup {
-    font-size:20px;
-    background: #4F463Dff !important;
-    color: #E4D7CEff!important;
-    width:1000px;
-    }
-    .swal2-popup .swal2-styled:focus {
-    box-shadow: none !important;
-    }
+.swal2-popup {
+font-size:20px;
+background: #FDC627 !important;
+color: #2347F9!important;
+width:800px;
+}
+.swal2-popup .swal2-styled:focus {
+box-shadow: none !important;
+}

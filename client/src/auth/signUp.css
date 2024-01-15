@@ -1,0 +1,93 @@
+*{
+font-family: LuckiestGuy;
+box-sizing:border-box;
+}
+.signUpMainContainer{
+width:100vw;
+height:100vh;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+}
+.signUpContainer{
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+padding: 7% 14%;
+border-radius:10px;   
+}
+.signUpForm{
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+width:100%;   
+}
+.signUpText{
+font-size: 30px;
+margin: 10px;
+font-weight: bolder;
+}
+.signUpLabel,.signUpInput{
+margin:2%;
+font-size: 20px;
+    }
+.signUpInput{
+border: 1px solid black;
+border-radius:10px;
+width:100%;
+padding:30px 20px;
+}
+.signUpInput:focus{
+box-shadow:0 0 7px 2px #803C24ff;
+outline: none;
+}
+.signUpLabel{
+color:#E4D7CEff;
+font-size: 20px;
+}
+.signUpBut{
+    font-size: 20px;
+    width:200px;
+    height:50px;
+    padding: 2px;
+    border-radius: 10px;
+    background-color: #E4D7CEff;
+    border: 1px solid #47362Dff;  
+    }
+    .signUpBut:hover{
+    background-color: #47362Dff;
+    color:#E4D7CEff ;
+    }
+    .imgEye{
+    width:50px;
+    height:50px;  
+    }
+    .closedEyeSignUp{
+    position:relative;
+    top:-115px;
+    left:160px;
+    background-color: transparent;
+    background-size: cover;
+    border: none;
+    }
+    .openEyeSignUp{
+    position:relative;
+    top:-115px;
+    left:160px;
+    background-color: transparent;
+    background-size: cover;
+    border: none;
+    }
+
+    .swal2-popup {
+    font-size:20px;
+    background: #4F463Dff !important;
+    color: #E4D7CEff!important;
+    width:1000px;
+    }
+    .swal2-popup .swal2-styled:focus {
+    box-shadow: none !important;
+    }

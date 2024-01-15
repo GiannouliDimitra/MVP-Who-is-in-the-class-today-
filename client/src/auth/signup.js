@@ -2,7 +2,8 @@ import React, { useState } from 'react';
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import Swal from 'sweetalert2';
-import Footer from '../Footer';
+import Dropdown from 'react-dropdown';
+import 'react-dropdown/style.css';
 import "./signUp.css"
 
 function SignUp () {
@@ -10,20 +11,24 @@ function SignUp () {
     let [name, setName] = useState("");
     let [email, setEmail] = useState("");
     let [password, setPassword] = useState("");
+    let [typeOfUser, setTypeOfUser] = useState("");
     const [eye,setEye] = useState ("closedEyeSignUp");
     const[passwordType,setPasswordType] = useState ("password");
-
+    const options = [
+      'teacher', 'student'
+    ];
+    const defaultOption = options[0];
     let navigate = useNavigate();
 
     async function handleSignUp(e) {
      e.preventDefault();
-     let res = await axios.post("https://bookanoffice.onrender.com/signUp", {
-       name, email, password,
+     let res = await axios.post("http://localhost:8000/signUp", {
+       name, email, password, typeOfUser
      });
      Swal.fire({text: res.data.msg,
         confirmButtonColor:"#B45931ff"
     });
-     navigate("/login");
+     navigate("/");
     }
 
     return ( 
@@ -59,6 +64,8 @@ function SignUp () {
                 value = {password}
                 onChange = {(e) => setPassword(e.target.value)}
                 />
+                <Dropdown options={options} onChange={(e => setTypeOfUser(e.value))} 
+                value={defaultOption} placeholder="Select an option" />
                 <button className='signUpBut' type='submit'>SignUp</button>
             </form>
             <button className={eye} 
@@ -74,10 +81,9 @@ function SignUp () {
                 setPasswordType("password")
                 return
               }
-              }}><img className="imgEye"src={require(`./authPhotos/${eye}.png`)} /></button>
+              }}><img className="imgEye" alt ="eye" src={require(`./authPhotos/${eye}.png`)} /></button>
         </div> 
         </div>
-        <Footer/>
         </div>
         
         
