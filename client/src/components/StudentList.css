@@ -1,15 +1,23 @@
+.mainInfoContainer{
+    display:flex;
+}
+.studentsContainer{
+    border:1px solid black;
+    margin:0px 40px;
+    width:60%;
+}
 .listCards{
-    width:100%;
+    width:50%;
     display:grid;
     grid-template-columns: repeat(5,1fr);
     gap:20px;
+    margin:10px;
     }
 .Container{
     display:flex;
     justify-content: space-between;
     align-items: center;
 }
-.logo{
-    background-color: rgb(200, 198, 198);
-    width:50px
+.pieChart{
+    width:15%;
 }
