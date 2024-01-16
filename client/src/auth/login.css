@@ -1,5 +1,5 @@
 *{
-font-family: LuckiestGuy;
+font-family: IndieFlower;
 box-sizing:border-box;
 }
 .loginMainContainer{
@@ -26,13 +26,13 @@ align-items: center;
 width:100%;   
 }
 .loginText{
-font-size:30px;
+font-size:40px;
 margin:10px;
 font-weight:bolder;
 }
 .loginLabel,.loginInput{
 margin:2%;
-font-size:14px;
+font-size:20px;
 }
 .loginInput{
 border: 1px solid black;
@@ -46,10 +46,11 @@ box-shadow:0 0 7px 2px #FDC627;
 outline: none;
 }
 .loginLabel{
-font-size: 16px;
+font-size: 22px;
 }
 .loginBut{
-font-size:20px;
+font-size:24px;
+font-weight: bold;
 width:200px;
 height:50px;
 padding:2px;
@@ -59,7 +60,7 @@ border: 1px solid;
 }
 .loginBut:hover{
 background-color: #2347F9;
-color:#FDC627 ;
+color:#FDC627;
 }
 .signUpLink{
 font-size: 30px;
@@ -67,12 +68,12 @@ color:#2347F9;
 margin: 10px;
 }
 .imgEye{
-width:30px;
-height:30px; 
+width:26px;
+height:26px; 
 }
 .closedEye, .openEye{
 position:relative;
-top:-200px;
+top:-215px;
 left:130px;
 background-color: transparent;
 background-size: cover;
@@ -84,8 +85,8 @@ font-size:25px;
 }
 .swal2-popup {
 font-size:20px;
-background: #FDC627 !important;
-color: #2347F9!important;
+background-color: #2347F9;
+color:#FDC627;  
 width:800px;
 }
 .swal2-popup .swal2-styled:focus {

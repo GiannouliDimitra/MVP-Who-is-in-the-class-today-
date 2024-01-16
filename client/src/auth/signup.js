@@ -1,9 +1,10 @@
 import React, { useState } from 'react';
 import axios from "axios";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 import Swal from 'sweetalert2';
 import Dropdown from 'react-dropdown';
 import 'react-dropdown/style.css';
+import image from "../pics/signUp.jpg"
 import "./signUp.css"
 
 function SignUp () {
@@ -11,7 +12,7 @@ function SignUp () {
     let [name, setName] = useState("");
     let [email, setEmail] = useState("");
     let [password, setPassword] = useState("");
-    let [typeOfUser, setTypeOfUser] = useState("");
+    let [typeOfUser, setTypeOfUser] = useState("student");
     const [eye,setEye] = useState ("closedEyeSignUp");
     const[passwordType,setPasswordType] = useState ("password");
     const options = [
@@ -34,9 +35,12 @@ function SignUp () {
     return ( 
         <div>
             <div className='signUpMainContainer'>
+              <div className='signUpImage'>
+              <img className="homeImage" alt ="woman writing" src={image}></img>
+              </div>
              <div className='signUpContainer'>
-            <form className='signUpForm' onSubmit={handleSignUp}>
-            <h1 className='signUpText'>SignUp Form</h1>
+              <form className='signUpForm' onSubmit={handleSignUp}>
+                <h1 className='signUpText'>SignUp Form</h1>
                 <label className='signUpLabel' htmlFor='name'> Name:</label>
                 <input
                 className='signUpInput'
@@ -64,26 +68,34 @@ function SignUp () {
                 value = {password}
                 onChange = {(e) => setPassword(e.target.value)}
                 />
-                <Dropdown options={options} onChange={(e => setTypeOfUser(e.value))} 
-                value={defaultOption} placeholder="Select an option" />
+                <div className='dropdownSection'>
+                  <h3 className='phraseIamA'>I am a: </h3>
+                  <Dropdown className="dropDownList" options={options} onChange={(e => setTypeOfUser(e.value))} 
+                  value={defaultOption} />
+                </div>
+              
                 <button className='signUpBut' type='submit'>SignUp</button>
             </form>
             <button className={eye} 
-            type="text" 
-            onClick={()=>{
-              if (eye==="closedEyeSignUp"){
-                setEye("openEyeSignUp")
-                setPasswordType("text")
-                return
-              }
-              else {
-                setEye("closedEyeSignUp")
-                setPasswordType("password")
-                return
-              }
-              }}><img className="imgEye" alt ="eye" src={require(`./authPhotos/${eye}.png`)} /></button>
+              type="text" 
+              onClick={()=>{
+                if (eye==="closedEyeSignUp"){
+                    setEye("openEyeSignUp")
+                    setPasswordType("text")
+                  return
+                 }
+                else {
+                  setEye("closedEyeSignUp")
+                  setPasswordType("password")
+                  return
+                }
+                }}><img className="imgEye" alt ="eye" 
+                    src={require(`./authPhotos/${eye}.png`)} />
+              </button>
+              <button className='goHome' onClick={()=>navigate("/")}>Go back Home</button>
         </div> 
         </div>
+
         </div>
         
         
