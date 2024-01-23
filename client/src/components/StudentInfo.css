@@ -1,21 +1,36 @@
 .studentInfo{
 display:flex;
-border:2px black solid;
-align-items: center;
 justify-content: space-between;
-padding: 5px;
-width: 200px;
+align-items: center;
+background-color: white;
+border:1px black solid;
+border-radius: 10px;
+text-align: center;
+padding:10px;
+margin:20px;
+width:400px;
+}
+.studentInfo:hover{
+box-shadow: 1px 1px 1px 2px black;
 }
 .editBut{
-    height:40px;
+height:40px;
 }
 .editItem{
-    transform: scale(2.5);
-    border:2px black solid;
-    transform: translateX(200px);
-    position: absolute;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+transform: scale(2);
+position: absolute;
+left:700px;
+top:300px;
+width:450px;
+height:400px;
+border:1px black solid;
+border-radius: 10px;
+box-shadow: inset 200px 200px 200px 800px white;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+}
+.editStudentBut{
+margin:5px;
 }

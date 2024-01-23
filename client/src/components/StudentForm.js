@@ -39,7 +39,7 @@ return (
           <Navbar/>
           <div className="imageAndFormContainer">
             <div className="imagesContainer">
-            <img className="formImageStars" alt ="woman wondering" src={imageStars}></img>
+            <img className="formImageStars" alt ="stars" src={imageStars}></img>
               <img className="formImage" alt ="woman wondering" src={imageWoman}></img>
             </div>
             <div className="formContainer">

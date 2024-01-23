@@ -38,7 +38,7 @@ return (
 ) : (
   <nav className ="navbar">
       <Link to="/">Home</Link>
-      <Link to="/profil">My profil</Link>
+      <Link to="/profil">Student {decoded.name}</Link>
       <Link to="/students">Dashboard</Link>
       <div className ="navItem"><Link className ="navText" onClick={handleLogout} to='/'>Logout</Link></div>
     </nav> 

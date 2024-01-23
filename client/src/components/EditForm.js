@@ -6,16 +6,26 @@ function EditForm ( { students , getStudents, countAbsents} ) {
     
     return (
         <div>
-            <div className ="logo">logo</div>
-               <div className ="mainContainer"> 
+            <div className ="mainContainer"> 
             <Navbar/>
-            <div className="cards">
+            <div className="containerUnderNavbar">
+                 <div>
+                <h1 className="editTitle">
+                    My students
+                </h1>
+            </div>
+           <div className="studentsEditContainer">
+             <div className="cards">
                 {students.map((student) => (
                     <StudentInfo className ="student" key = {student._id} student ={student} getStudents={getStudents} countAbsents = {countAbsents}
                     />
                      ))
                  }
             </div>
+           </div>
+            </div>
+           
+           
         </div> 
         </div>
      
