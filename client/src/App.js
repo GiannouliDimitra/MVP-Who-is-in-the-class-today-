@@ -6,7 +6,6 @@ import EditForm from "./components/EditForm";
 import StudentList from "./components/StudentList";
 import Home from "./components/Home";
 import SignUp from "./auth/SignUp.js";
-import Profil from "./components/Profil.js";
 import ("./App.css");
 
 function App() {
@@ -70,7 +69,6 @@ function countPresents () {
       <Route path = "/students" element = { <StudentList students = {students} getStudents={getStudents}  countAbsents = {countAbsents} countPresents ={countPresents}  /> }/>
       <Route path = "/form" element = { <StudentForm getStudents={getStudents} student={student} setStudent={setStudent}/> } />
       <Route path = "/edit" element = { <EditForm students={students} getStudents={getStudents} countAbsents ={countAbsents}/> } />
-{/*       <Route path = "/profil" element = { <Profil students={students} getStudents={getStudents} /> } /> */}
     </Routes>  
     </BrowserRouter>
   );

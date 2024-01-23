@@ -4,7 +4,7 @@ const mongoose = require ("mongoose");
 const studentSchema = new mongoose.Schema ({
     name: String,
     image: String,
-    isPresent: { type: String, default: "yes" },
+    isPresent: { type: String, default: "present" },
 });
 
 //model 
