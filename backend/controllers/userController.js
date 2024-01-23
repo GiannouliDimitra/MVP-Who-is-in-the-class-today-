@@ -52,13 +52,13 @@ const login = async (req, res) => {
             } else {
                 // generate the token
                 let token = jwt.sign(
-                    { email: oldUser.email, id: oldUser._id, name: oldUser.name} ,
+                    { email: oldUser.email, id: oldUser._id, name: oldUser.name,  typeOfUser:oldUser.typeOfUser } ,
                     process.env.PRIVATE_KEY,
                     { expiresIn: "3h" }
                 );
                 return res
                     .status(200)
-                    .send({ msg: `Login successfully. Welcome ${oldUser.name}`, token });
+                    .send({ msg: `Login successfully. Welcome ${oldUser.name}! You are a ${oldUser.typeOfUser}.`, token });
             }
         } else {
             return res.status(404).send({

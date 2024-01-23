@@ -1,3 +1,4 @@
+import { useState, useEffect } from "react";
 import StudentItem from "./StudentItem";
 import AnalogClock from 'analog-clock-react';
 import Navbar from "./Navbar";
@@ -5,7 +6,7 @@ import DateDisplay from "./DateDisplay";
 import { PieChart } from 'react-minimal-pie-chart';
 import ("./StudentList.css");
 
-function StudentList ( { students,getStudents, countAbsents, absents } ) {
+function StudentList ( { students,getStudents, countAbsents, countPresents } ) {
     let options = {
         width: "100px",
         border: true,
@@ -20,19 +21,27 @@ function StudentList ( { students,getStudents, countAbsents, absents } ) {
           hour: "#2e2e2e"
         }
     };
+    let presents = countPresents();
+    let absents = countAbsents();
+
+    useEffect(() => {
+        getStudents();
+        
+      }, []);
+
     return (
         <div className="studentListContainer">
             <Navbar/>
-            <h2>Who is in the class?</h2>
-            <div class="mainInfoContainer">
-                <div className="date&time">
+            <h1>Who is in the class?</h1>
+            <div className="mainInfoContainer">
+                <div className="dateAndTime">
                     <DateDisplay />
                     <AnalogClock  {...options}/>
                 </div>
                 <div className="studentsContainer">
                     <div className="listCards">
                      {students.map((student) => (
-                        <StudentItem key = {student._id} student ={student}
+                        <StudentItem key = {student._id} student ={student} getStudents = {getStudents} countAbsents ={countAbsents}
                         />
                     ))}
                 </div>
@@ -41,14 +50,30 @@ function StudentList ( { students,getStudents, countAbsents, absents } ) {
                 <PieChart
                     label={(props) => { return props.dataEntry.title;}}
                     data={[
-                        { title: `${absents}`, value: 10, color: '#2347F9' },
-                        { title: 'Presents', value: 15, color: '#FDC627' },
+                        { title: `${absents}%`, value: absents, color: '#2347F9' },
+                        { title: `${presents}%`, value: presents, color: '#FDC627' },
                         ]}
-    />
+                />
+               
+                <div className="PiechartLegent">
+                    <div className="absentsContainer">
+                       <div className="absentsLegent">
+                    </div>
+                    <div>
+                        <h5>absents</h5>
+                    </div> 
+                    
+                    </div>  
+                     <div className="presentsContainer">
+                       <div className="presentsLegent">
+                    </div>
+                    <div>
+                        <h5>presents</h5>
+                    </div> 
+                </div> 
                 </div>
+                </div>  
             </div>
-            
-                <h4>{absents}</h4>
         </div>  
     )
 };

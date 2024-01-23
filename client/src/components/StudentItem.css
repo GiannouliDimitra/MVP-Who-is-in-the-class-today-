@@ -1,20 +1,53 @@
 .studentCard{
-    border: 2px solid black;
-    width:150px;
-    display:flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+border: 2px solid black;
+border-radius:10px;
+background-color: white;
+width:150px;
+display:flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+}
+.studentCard:hover{
+box-shadow: 10px 10px 1px 0.5px black;
 }
 .present{
-    color:green;
+color:green;
    
 }
 .absent{
-    color:red;
-    opacity:0.3 ;
+color:red;
+opacity:0.3 ;
 }
 p{
-    font-size: 25px;
-    font-weight: bolder;
+font-size: 25px;
+font-weight: bolder;
+}
+.present, .absent{
+margin:8px;
+}
+
+.deleteBut, .editBut{
+width:30px;
+height:30px;
+background-color: white;
+border:none;
+border-radius: 50%;
+margin:4px;
+}
+.deleteBut:hover, .editBut:hover{
+width:30px;
+height:30px;
+padding: 2px;
+background-color: white;
+border:1px solid black;
+margin:4px;
+box-shadow: 1px 1px 1px 2px black;
+}
+.swal2-popup {
+font-size:30px;
+width:600px;
+}
+.swal2-popup .swal2-styled:focus {
+box-shadow: none !important;
 }

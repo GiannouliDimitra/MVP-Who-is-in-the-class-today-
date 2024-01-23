@@ -3,14 +3,15 @@ font-family: IndieFlower;
 box-sizing:border-box;
 }
 .signUpMainContainer{
-width:100vw;
-height:100vh;
+width:90vw;
+height:90vh;
 display: flex;
 justify-content: center;
 align-items: center;
 }
 .signUpImage{
-    width:40%;
+width:40%;
+margin:400px 0 0 100px;
 }
 .signUpContainer{
 display: flex;
@@ -18,8 +19,7 @@ flex-direction: column;
 justify-content: center;
 align-items: center;
 padding: 7% 14%;
-border-radius:10px;
-border:1px solid black;   
+border-radius:10px;  
 }
 .signUpForm{
 display: flex;
@@ -64,32 +64,30 @@ border: 1px solid;
 .signUpBut:hover{
 background-color: #2347F9;
 color:#FDC627;
-    }
+}
 .imgEye{
 width:26px;
 height:26px;  
 }
 .closedEyeSignUp{
 position:relative;
-top:-145px;
-left:160px;
+top:-170px;
+left:150px;
 background-color: transparent;
 background-size: cover;
 border: none;
 }
 .openEyeSignUp{
 position:relative;
-top:-115px;
-left:160px;
+top:-170px;
+left:150px;
 background-color: transparent;
 background-size: cover;
 border: none;
 }
 
 .swal2-popup {
-font-size:20px;
-background-color: #2347F9;
-color:#FDC627;  
+font-size:30px;
 width:1000px;
 }
 .swal2-popup .swal2-styled:focus {
@@ -105,13 +103,15 @@ margin:10px;
 }
 .goHome{
 border: 1px solid black;
-border-radius:10px;  
+border-radius:10px; 
+font-size:20px;
+padding:8px; 
 }
 .goHome:hover{
 background-color: #2347F9;
 color:#FDC627;  
 }
 .Dropdown-control{
-    border: 1px solid black;
-    border-radius:10px; 
+border: 1px solid black;
+border-radius:10px; 
 }

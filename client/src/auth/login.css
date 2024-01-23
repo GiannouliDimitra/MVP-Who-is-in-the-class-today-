@@ -41,7 +41,7 @@ width:100%;
 padding:30px 20px;
 }
 .loginInput:focus{
-border: 2px solid #FC6CAC;
+border:2px solid #FC6CAC;
 box-shadow:0 0 7px 2px #FDC627;
 outline: none;
 }
@@ -84,10 +84,8 @@ margin:10px 0;
 font-size:25px;
 }
 .swal2-popup {
-font-size:20px;
-background-color: #2347F9;
-color:#FDC627;  
-width:800px;
+font-size:30px;
+width:600px;
 }
 .swal2-popup .swal2-styled:focus {
 box-shadow: none !important;

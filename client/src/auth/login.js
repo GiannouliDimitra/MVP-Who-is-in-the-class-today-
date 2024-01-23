@@ -33,15 +33,15 @@ async function handleLogin(e) {
       // Save the token in the browser
       if(res.status === 200) {
         Swal.fire({text: res.data.msg,
-          confirmButtonColor:"#FC6CAC"});
+          confirmButtonColor:"#FDC627"});
         decoded = jwtDecode(token);
-        console.log (decoded, token)
+        console.log ("the decoded",decoded, token)
         localStorage.setItem("token", token);
-        navigate("/");
+        navigate("/students");
       }
     } catch (error) {
       Swal.fire( {text: "Can not login, please check your email or password.",
-      confirmButtonColor:"#FC6CAC"});
+      confirmButtonColor:"#FDC627"});
     }
   }
 

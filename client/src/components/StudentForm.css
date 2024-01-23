@@ -1,24 +1,77 @@
 *{
     box-sizing: border-box;
 }
+.mainFormContainer{
+width:100vw;
+}
+.imageAndFormContainer{
+display:flex;
+align-items: center; 
+}
+.formContainer{
+width:80vw;
+height:60vh;
+}
 .studentForm{
-    display:grid;
-    grid-template-columns: 1fr;
-    justify-items: center;
-    width:100%;
-    gap:20px;
+display:grid;
+grid-template-columns: 1fr;
+justify-items: center;
+}
+.formTitle{
+font-size:30px;
+}
+.addStudentInput{
+width:25vw;
+height:5vh;
+font-size:20px;
+margin:10px;
+padding:10px;
+border: 1px solid black;
+border-radius:10px;
+}
+.addStudentInput:focus{
+border: 2px solid #FC6CAC;
+box-shadow:0 0 7px 2px #FDC627;
+outline: none;
+}
+.formCreateBut{
+font-size:20px;
+font-weight: bold;
+width:150px;
+height:50px;
+padding:2px;
+margin: 4px;
+border-radius: 10px;
+border: 1px solid;
+}
+.formCreateBut:hover{
+background-color: #2347F9;
+color:#FDC627;
+}
+.imagesContainer{
+border:1px solid black;
+height:200px;
+margin:400px 0 0 100px;
+}
+.formImageStars{
+width:100px;
+}
+.formImage{
+width:300px;
+
 }
 input{
-    width:45%;
-    height: 40px;
+width:45%;
+height: 40px;
 }
 .createBut{
-    width:20%;
-    height:150%;
+width:20%;
+height:150%;
 }
-
-.mainContainer{
-    display:flex;
-    justify-content: center;
-    align-items: center;
+.swal2-popup {
+font-size:30px;
+width:1000px;
+}
+.swal2-popup .swal2-styled:focus {
+box-shadow: none !important;
 }

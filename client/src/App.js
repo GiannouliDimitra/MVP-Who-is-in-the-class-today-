@@ -6,12 +6,12 @@ import EditForm from "./components/EditForm";
 import StudentList from "./components/StudentList";
 import Home from "./components/Home";
 import SignUp from "./auth/SignUp.js";
+import Profil from "./components/Profil.js";
 import ("./App.css");
 
 function App() {
 
   //states
-  const [absents, setAbsents] = useState(0);
   const [student, setStudent] = useState({
     name: "",
     image: "",
@@ -30,25 +30,35 @@ const getStudents = () => {
   } catch (error) {
     console.log(error)
   }
-  console.log("the students" , students)
 };
 //rendering students without refreshing
 useEffect(() => {
   getStudents();
-  countAbsents();
+  
 }, []);
 
 
-
-async function countAbsents () {
-  await getStudents();
+function countAbsents() {
   let count=0;
+  console.log("inside countfunc",students)
   students.forEach((student) => {
     if (student.isPresent==="absent"){
       count +=1;
     }})
-  setAbsents(count)
-  console.log(absents);
+  console.log("absents", count);
+  let absentPercentage = Math.round(100*count/students.length)
+  return absentPercentage;
+};
+function countPresents () {
+  let count=0;
+  console.log("inside countfunc",students)
+  students.forEach((student) => {
+    if (student.isPresent==="present"){
+      count +=1;
+    }})
+  console.log("presents", count);
+  let precentPercentage = Math.round(100*count/students.length)
+  return precentPercentage;
 };
 
 
@@ -57,9 +67,10 @@ async function countAbsents () {
     <Routes>
       <Route path = "/" element = { <Home /> }/>
       <Route path = "/signUp" element = { <SignUp /> }/>
-      <Route path = "/students" element = { <StudentList students = {students} getStudents={getStudents}  countAbsents = {countAbsents} absents ={absents} /> }/>
+      <Route path = "/students" element = { <StudentList students = {students} getStudents={getStudents}  countAbsents = {countAbsents} countPresents ={countPresents}  /> }/>
       <Route path = "/form" element = { <StudentForm getStudents={getStudents} student={student} setStudent={setStudent}/> } />
       <Route path = "/edit" element = { <EditForm students={students} getStudents={getStudents} countAbsents ={countAbsents}/> } />
+{/*       <Route path = "/profil" element = { <Profil students={students} getStudents={getStudents} /> } /> */}
     </Routes>  
     </BrowserRouter>
   );

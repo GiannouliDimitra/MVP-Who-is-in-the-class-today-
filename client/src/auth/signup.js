@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import axios from "axios";
-import { useNavigate, Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import Swal from 'sweetalert2';
 import Dropdown from 'react-dropdown';
 import 'react-dropdown/style.css';
@@ -27,7 +27,7 @@ function SignUp () {
        name, email, password, typeOfUser
      });
      Swal.fire({text: res.data.msg,
-        confirmButtonColor:"#B45931ff"
+        confirmButtonColor:"#FDC627"
     });
      navigate("/");
     }
@@ -92,7 +92,7 @@ function SignUp () {
                 }}><img className="imgEye" alt ="eye" 
                     src={require(`./authPhotos/${eye}.png`)} />
               </button>
-              <button className='goHome' onClick={()=>navigate("/")}>Go back Home</button>
+              <button className='goHome' onClick={()=>navigate("/")}>Go Home</button>
         </div> 
         </div>
 
