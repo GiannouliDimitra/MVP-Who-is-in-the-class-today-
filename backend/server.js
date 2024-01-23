@@ -3,6 +3,8 @@ const connection = require ("./connection");
 const cors = require ("cors");
 const app = express();
 const port = 8000;
+const dotenv = require("dotenv");
+dotenv.config();
 
 const studentRoutes = require("./routers/studentRouter");
 const userRoutes = require("./routers/userRouter");
