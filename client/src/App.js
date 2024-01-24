@@ -5,7 +5,7 @@ import StudentForm from "./components/StudentForm";
 import EditForm from "./components/EditForm";
 import StudentList from "./components/StudentList";
 import Home from "./components/Home";
-import SignUp from "./auth/SignUp.js";
+import SignUp from "./auth/SignUp";
 import ("./App.css");
 
 function App() {
