@@ -1,4 +1,4 @@
-import Login from "../auth/Login";
+import Login from "../auth/Login.js";
 import image from "../pics/teacher_img.jpg"
 import "./home.css";
 

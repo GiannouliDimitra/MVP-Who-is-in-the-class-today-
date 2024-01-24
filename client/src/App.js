@@ -4,8 +4,8 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import StudentForm from "./components/StudentForm";
 import EditForm from "./components/EditForm";
 import StudentList from "./components/StudentList";
-import Home from "./components/Home";
-import SignUp from "./auth/SignUp";
+import Home from "./components/Home.js";
+import SignUp from "./auth/SignUp.js";
 import ("./App.css");
 
 function App() {

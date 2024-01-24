@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import StudentItem from "./StudentItem";
 import AnalogClock from 'analog-clock-react';
-import Navbar from "./Navbar";
+import Navbar from "./Navbar.js";
 import DateDisplay from "./DateDisplay";
 import { PieChart } from 'react-minimal-pie-chart';
 import ("./StudentList.css");

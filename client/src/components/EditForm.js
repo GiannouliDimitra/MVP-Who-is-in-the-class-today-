@@ -1,5 +1,5 @@
-import StudentInfo from "./StudentInfo";
-import Navbar from "./Navbar";
+import StudentInfo from "./StudentInfo.js";
+import Navbar from "./Navbar.js";
 import ("./EditForm.css")
 
 function EditForm ( { students , getStudents, countAbsents} ) {
