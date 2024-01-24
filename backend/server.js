@@ -1,12 +1,9 @@
-import mongoose from 'mongoose'; 
-import dotenv from 'dotenv';
 const express = require ("express");
 const connection = require ("./connection");
 const cors = require ("cors");
 const app = express();
 const port = 8000;
 
-dotenv.config();
 
 const studentRoutes = require("./routers/studentRouter");
 const userRoutes = require("./routers/userRouter");
