@@ -3,6 +3,7 @@
 }
 .mainFormContainer{
 width:100vw;
+height:80vh;
 }
 .imageAndFormContainer{
 display:flex;
