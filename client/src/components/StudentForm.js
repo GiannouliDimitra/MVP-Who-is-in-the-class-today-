@@ -22,7 +22,7 @@ function StudentForm ( { student, setStudent, getStudents } ) {
         e.preventDefault();
         try {
             axios
-            .post("http://localhost:8000/student/create" , student)
+            .post("https://who-is-in-the-class.onrender.com/student/create" , student)
             .then((res) => {
               Swal.fire({text: "The student " + res.data.name + " is added!", confirmButtonColor:"#FDC627"})
               setStudent({ name: "", image: "" })})

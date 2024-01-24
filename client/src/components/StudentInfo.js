@@ -31,7 +31,7 @@ const handleInputChange = (e) =>  {
 function changeName(id){
 try {
     axios
-    .put((`http://localhost:8000/student/${id}`), {
+    .put((`https://who-is-in-the-class.onrender.com/student/${id}`), {
         name:updatedValue.name,
         image:updatedValue.image,
         })

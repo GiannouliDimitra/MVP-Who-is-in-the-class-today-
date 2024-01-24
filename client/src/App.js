@@ -21,7 +21,7 @@ function App() {
 const getStudents = () => {
   try {
     axios
-    .get("http://localhost:8000/students")
+    .get("https://who-is-in-the-class.onrender.com/students")
     .then((res) => {
       setStudents(res.data);
       })

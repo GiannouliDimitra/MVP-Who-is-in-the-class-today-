@@ -23,7 +23,7 @@ function SignUp () {
 
     async function handleSignUp(e) {
      e.preventDefault();
-     let res = await axios.post("http://localhost:8000/signUp", {
+     let res = await axios.post("https://who-is-in-the-class.onrender.com/signUp", {
        name, email, password, typeOfUser
      });
      Swal.fire({text: res.data.msg,

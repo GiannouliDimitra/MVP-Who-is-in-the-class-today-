@@ -28,7 +28,7 @@ function StudentItem ( {student, getStudents, countAbsents} ){
     }).then((result) => {
       if (result.isConfirmed) { 
         try {
-          axios.delete(`http://localhost:8000/student/${id}`)
+          axios.delete(`https://who-is-in-the-class.onrender.com/student/${id}`)
           .then(() =>getStudents())
         } catch (error) {
           console.log("delete student", error);
@@ -45,7 +45,7 @@ function StudentItem ( {student, getStudents, countAbsents} ){
 function changeStatus(id){
     try {
         axios
-        .put((`http://localhost:8000/student/${id}`), {
+        .put((`https://who-is-in-the-class.onrender.com/student/${id}`), {
             isPresent: student.isPresent==="present" ? "absent" : "present",
         })
         .then ((res) =>  Swal.fire({text: res.data.msg ,
